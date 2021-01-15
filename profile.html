@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Shashini Prabodha Abeygunasekara</title>
     <link href="assert/css/normalize.css" rel="stylesheet">
+    <link href="assert/fonts/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="assert/icon/splogo.png">
     <style>
 
@@ -17,25 +18,80 @@
             height: 10vh;
             position: fixed;
             background: #1c1b1b;
-            box-shadow: #393939 2px 6px 10px;
             z-index: 2;
         }
 
+        header > header {
+            box-shadow: #4d4d4d -10px 5px 10px;
+            z-index: 0;
+            animation-name: headeranimate;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes headeranimate {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100vw;
+            }
+        }
+
         header > div {
-            width: 7.5vw;
-            height: 14vh;
+            width: 105px;
+            height: 105px;
             position: fixed;
             border-radius: 100%;
             top: 1.2vw;
-            left: 0;
-            border: 0.3vw solid #b1b1b1;
+            left: 4px;
+            border: 0.3vw solid transparent;
+            flex: max-content;
+        }
+
+        header > div:nth-child(3) {
+
+            box-shadow: #6b0091 2px 3px 5px;
+            top: 0.5vw;
+            animation-name: animateLogocircle1;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+
+        }
+
+        header > div:nth-child(4) {
+            box-shadow: #e9e9e9 2px 3px 5px;
+
+            animation-name: animateLogocircle2;
+            animation-iteration-count: infinite;
+            animation-duration: 10s;
+
+        }
+
+        @keyframes animateLogocircle1 {
+            from {
+
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes animateLogocircle2 {
+            from {
+
+            }
+            to {
+                transform: rotate(-360deg);
+            }
         }
 
         header > nav {
             width: max-content;
             height: 10vh;
             position: absolute;
-            top: 0;
+            top: -10px;
             bottom: 0;
             right: 0;
         }
@@ -88,7 +144,7 @@
         }
 
         section:nth-child(2) > section {
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.7);
 
         }
 
@@ -123,9 +179,8 @@
             transform: translate(-50%, -50%);
             position: absolute;
             text-shadow: #101010 2px 4px 4px;
-            animation: typing 20s infinite, blink-caret .75s step-end infinite;
-
         }
+
 
         .homepage > h1 {
             font-family: "Segoe UI";
@@ -215,9 +270,11 @@
             background-size: cover;
         }
 
-        #aboutme > article {
+        /*................article.................*/
+
+        #aboutme > article, #skill > article, #myassignments > article, #myproject > article {
             width: 80%;
-            height: 82%;
+            height: 75%;
             position: absolute;
             left: 50%;
             top: 55%;
@@ -226,7 +283,9 @@
             border-radius: 50px 0 50px 0;
         }
 
-        #aboutme > article > h1 {
+        /*.................article----> h1.............*/
+
+        .h1caption {
             font-family: "Segoe UI";
             position: absolute;
             left: 50%;
@@ -235,25 +294,27 @@
             color: white;
             font-size: 50px;
             letter-spacing: 3px;
+            text-align: center;
 
         }
-        #aboutme > article>div {
+
+        #aboutme > article > div, #skill > article > div {
             position: absolute;
             width: 50px;
             height: 50px;
             border: #585858 2px solid;
-           box-shadow:  #323232 3px -3px;
+            box-shadow: #323232 3px -3px;
 
         }
 
-        #aboutme > article>div:nth-child(2) {
+        #aboutme > article > div:nth-child(2) {
             height: 60px;
             width: 60px;
             left: 35.3%;
             top: -40px;
         }
 
-        #aboutme > article>div:nth-child(3) {
+        #aboutme > article > div:nth-child(3) {
             height: 30px;
             width: 30px;
             left: 34%;
@@ -268,6 +329,9 @@
             position: absolute;
             border-radius: 100%;
             border: #393939 3px solid;
+
+            animation-name: asideRotate;
+            animation-duration: 2s;
 
         }
 
@@ -296,6 +360,15 @@
 
         }
 
+        @keyframes asideRotate {
+            from {
+                transform: rotateZ(0deg);
+            }
+            to {
+                transform: rotateZ(-2deg);
+            }
+        }
+
         #aboutme > article > article > h2 {
             text-align: left;
             padding: 10px;
@@ -309,7 +382,7 @@
 
         }
 
-        #aboutme>article>p{
+        #aboutme > article > p {
             font-family: "Segoe Print";
             font-style: italic;
             color: white;
@@ -317,32 +390,335 @@
             position: absolute;
             padding: 5%;
             margin: 0%;
-            bottom: 5%;
+            bottom: 0%;
         }
+
+        /*..............set background in section.....................*/
+        #skill, #myassignments, #myproject, #services, #contact, #education {
+            background: url("assert/icon/download.jpg");
+            background-size: cover;
+        }
+
+        #skill > article > h1 {
+            top: -10%;
+        }
+
+        #skill > article > div {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border: #585858 2px solid;
+            box-shadow: #323232 3px -3px;
+        }
+
+        #skill > article > div:nth-child(2) {
+            height: 60px;
+            width: 60px;
+            left: 23.8%;
+            top: -80px;
+        }
+
+        #skill > article > div:nth-child(3) {
+            height: 30px;
+            width: 30px;
+            left: 22%;
+            top: -36px;
+        }
+
+        #skill > article > section:hover {
+            width: 32vw;
+            height: 4vh;
+            border-radius: 30px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: .5px #515151 solid;
+            background: rgba(255, 255, 255, .1);
+        }
+
+        #skill > article > section {
+            width: 22vw;
+            height: 4vh;
+            border-radius: 30px;
+            position: absolute;
+            left: 0%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .progressbar {
+            width: 80vh;
+            height: max-content;
+            position: absolute;
+            top: 15vh;
+            left: 4vw;
+        }
+
+        .progressbar > div {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            display: flex;
+            margin: 10%;
+            left: -66px;
+
+        }
+
+        .progressbar > div:nth-child(1) {
+            top: -6%;
+            background: url("assert/icon/java_100px.png");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .progressbar > div:nth-child(2) {
+            top: 17%;
+            background: url("assert/icon/html_5_100px.png");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .progressbar > div:nth-child(3) {
+            top: 38%;
+            background: url("assert/icon/css3_100px.png");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .progressbar > div:nth-child(4) {
+            top: 60%;
+            background: url("assert/icon/mysql-logo-vector-free-download-11573934106vmvysk1ovw.png");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .progressbar > section {
+            width: 0vw;
+            height: 3vh;
+            border-radius: 20px;
+            left: 0%;
+            display: flex;
+            margin: 10%;
+            font-style: italic;
+            color: white;
+            text-align: left;
+
+            animation-name: progressbaranimate;
+            animation-duration: 4s;
+
+        }
+
+        @keyframes progressbaranimate {
+            from {
+                width: 0;
+            }
+            to {
+                width: available;
+            }
+        }
+
+        .progressbar > section:nth-child(5) {
+            width: 70%;
+            top: 50%;
+            background: linear-gradient(to right, #fd3535, #fa4f46, #ff675a, #ff7769);
+            transition: width;
+
+        }
+
+        .progressbar > section:nth-child(6) {
+            width: 55%;
+            top: 60%;
+            background: linear-gradient(to right, #f8c504, #fff319, #ecf146, #f2ff69);
+        }
+
+        .progressbar > section:nth-child(7) {
+            width: 40%;
+            top: 70%;
+            background: linear-gradient(to right, #000e53, #0133a7, #0022cd, #281fff);
+        }
+
+        .progressbar > section:nth-child(8) {
+            width: 50%;
+            top: 80%;
+            background: linear-gradient(to right, #640062, #790086, #ad00be, #df52ff);
+
+        }
+
+        .skillPicture {
+            width: 57%;
+            height: 81%;
+            position: absolute;
+            right: -8%;
+            background: url("assert/icon/skillpic.png");
+            background-size: cover;
+
+        }
+
+        #myassignments > article > div, #myproject > article > div {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border: #585858 2px solid;
+            box-shadow: #323232 3px -3px;
+        }
+
+        #myassignments > article > div:nth-child(2), #myproject > article > div:nth-child(2) {
+            height: 60px;
+            width: 60px;
+            left: 27.8%;
+            top: -66px;
+        }
+
+        #myassignments > article > div:nth-child(3), #myproject > article > div:nth-child(3) {
+            height: 30px;
+            width: 30px;
+            left: 26%;
+            top: -24px;
+        }
+
+        #myassignments > article > aside, #myproject > article > aside {
+            width: 25%;
+            height: 80%;
+            position: absolute;
+            top: 5%;
+            box-shadow: black 2px 5px 10px;
+            border-radius: 50px 0 50px 0;
+            border: black 1px solid;
+            display: flex;
+            margin-right: 300px;
+        }
+
+        #myassignments > article > aside:nth-child(4), #myproject > article > aside:nth-child(4) {
+            background: url("assert/icon/ass1.png");
+            background-size: cover;
+            background-position: center;
+            left: 0;
+        }
+
+        #myassignments > article > aside:nth-child(5), #myproject > article > aside:nth-child(5) {
+            background: url("assert/icon/ass2.gif");
+            background-size: cover;
+            background-position: center;
+            left: 37.5%;
+        }
+
+        #myassignments > article > aside:nth-child(6), #myproject > article > aside:nth-child(6) {
+            background: url("assert/icon/ass2.jpg");
+            background-size: cover;
+            background-position: center;
+            left: 75%;
+        }
+
+
+        #myassignments > article > h1 {
+            top: -14%;
+        }
+
+        #myassignments > article > aside > h2, #myproject > article > aside > h2 {
+            font-family: Beach;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+
+        }
+
+        #myproject > article > aside > h2 {
+            font-family: Beach;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            left: 30%;
+
+        }
+
+        #myproject > article > aside:nth-child(4) {
+            background: url("assert/icon/proj1.gif");
+            background-size: cover;
+            background-position: center;
+            left: 0;
+        }
+
+        #myproject > article > aside:nth-child(5) {
+            background: url("assert/icon/proj2.gif");
+            background-size: cover;
+            background-position: center;
+            left: 37.5%;
+        }
+
+        #myproject > article > aside:nth-child(6) {
+            background: url("assert/icon/pro3.jpg");
+            background-size: cover;
+            background-position: center;
+            left: 75%;
+        }
+
+        #myproject > article > h1 {
+            top: -13%;
+        }
+
+        #myproject > article > div:nth-child(2) {
+            left: 33%;
+        }
+
+        #myproject > article > div:nth-child(3) {
+            left: 31.5%;
+        }
+
         .letterDecore {
             font-family: "Old English Text MT";
             color: #FF6D67;
         }
 
-        #skill {
-            background: url("assert/icon/download.jpg");
-            background-size: cover;
+        #education > div {
+            width: 2px;
+            height: 60%;
+            position: absolute;
+            border-left: white 5px solid;
+            left: 50%;
+            top: 60%;
+            transform: translate(-50%, -50%);
         }
 
-        #contact {
-            background: url("assert/icon/download.jpg");
-            background-size: cover;
+        #education > h1 {
+            top: 4%
         }
 
-        header > div {
-            flex: max-content;
+        #education>div>aside{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            background: white;
+            border-radius: 100%;
+            left: -2px;
+            top: 0%;
+            transform: translate(-50%, -50%);
         }
+
+        #education>div>aside:nth-child(2){
+            top: 50%;
+        }
+        #education>div>aside:nth-child(3){
+            top: 100%;
+        }
+        #education>div>aside{
+            background: url("assert/icon/hat.png");
+            background-size: cover;
+            background-position: center;
+            background-color: white;
+            border:3px solid white;
+        }
+
 
     </style>
 </head>
 <body>
+
 <header>
+    <header></header>
     <img src="assert/icon/splogo.png" id="fixedlogo">
+    <div></div>
     <div></div>
     <nav>
         <ul>
@@ -356,6 +732,7 @@
         </ul>
     </nav>
 </header>
+
 <section id="home">
     <div>
         <img src="assert/icon/homepic.jpg" id="homepic">
@@ -382,7 +759,7 @@
 </section>
 <section id="aboutme">
     <article>
-        <h1>
+        <h1 class="h1caption">
             <b><u>AB</u><span class="letterDecore"><u>O</u></span><u>UT M</u><span class="letterDecore"><u>E</u></span></b>
         </h1>
         <div></div>
@@ -391,10 +768,21 @@
             <h2>NAME : SHASHINI PRABODHA ABEYGUNASEKARA</h2>
             <h2>DATE OF BIRTH : 17/01/1999</h2>
             <h2>EMAIL : shashiniprabodha0503@gmail.com</h2>
-            <h2>TP : +94 71 91 99 866</h2>
+            <h2>TP : +94 71 91 99 866
+            </h2>
             <button type="button"
-                    style="right: 0%; top: 85%; border-radius: 30% 30% 30% 30%;  background: rgba(256, 256, 256, .3); width: 100px; height:45px">
-              CV
+                    style=" font-family: 'Segoe Print';
+                    border-radius: 20% 20% 20% 20%;
+                    background: rgba(256, 256, 256, .2);
+                    width: 94px;
+                    height: 35px;
+                    bottom: 170px;
+                    right: 345px;
+                    position: absolute;
+                    border: 1px #ffffff solid;
+                    color: wheat;
+                    box-shadow: black 2px 2px 2px;">
+                <i class="fas fa-long-arrow-alt-down"></i> CV
             </button>
         </article>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid architecto atque autem corporis
@@ -404,18 +792,107 @@
     <aside></aside>
     <aside></aside>
     <aside></aside>
-
-
-
 </section>
+
 <section id="skill">
+    <article>
+        <h1 class="h1caption"><u>EV</u><span class="letterDecore"><u>E</u></span><u>RYTH</u><span
+                class="letterDecore"><u>I</u></span><u>NG
+            AB</u><span class="letterDecore"><u>O</u></span><u>UT MY</u>
+            <u>K</u><span class="letterDecore"><u>N</u></span><u>OWLE</u><span
+                    class="letterDecore"><u>D</u></span><u>GE</u></h1>
+        <div></div>
+        <div></div>
+        <aside class="progressbar">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <section><h5 style="left:80% ;position: absolute">70%</h5></section>
+            <section><h5 style="left:65% ;position: absolute">55%</h5></section>
+            <section><h5 style="left:50% ;position: absolute">40%</h5></section>
+            <section><h5 style="left:60% ;position: absolute">50%</h5></section>
+        </aside>
+        <aside class="skillPicture">
+
+        </aside>
+    </article>
+</section>
+
+<section id="myassignments">
+    <article>
+        <h1 class="h1caption"><u>MY AS</u><span class="letterDecore"><u>S</u></span><u>IGNM</u><span
+                class="letterDecore"><u>E</u></span><u>NTS</u></h1>
+        <div></div>
+        <div></div>
+        <aside><h2>Assignment 01</h2></aside>
+        <aside><h2>Assignment 02</h2></aside>
+        <aside><h2>Assignment 03</h2></aside>
+        <button type="button"
+                style="
+                font-size: 20px;
+                left: 45%;
+                top: 90%;
+                border-radius: 50px 0 50px 0;
+                font-family: Beach;
+                border: 1px solid white;
+                background: transparent;
+                color: white;
+                width: 13%;
+                height: 7%;
+                position: absolute">
+            View More
+        </button>
+    </article>
+</section>
+
+<section id="myproject">
+    <article>
+        <h1 class="h1caption"><u>MY P</u><span class="letterDecore"><u>R</u></span><u>OJEC</u><span
+                class="letterDecore"><u>T</u></span><u>S</u></h1>
+        <div></div>
+        <div></div>
+        <aside><h2>Project 01</h2></aside>
+        <aside><h2>Project 02</h2></aside>
+        <aside><h2>Project 03</h2></aside>
+        <button type="button"
+                style="
+                font-size: 20px;
+                left: 45%;
+                top: 90%;
+                border-radius: 50px 0 50px 0;
+                font-family: Beach;
+                border: 1px solid white;
+                background: transparent;
+                color: white;
+                width: 13%;
+                height: 7%;
+                position: absolute">
+            View More
+        </button>
+    </article>
 
 </section>
 
+<section id="education">
+    <h1 class="h1caption"><u>ED</u><span class="letterDecore"><u>U</u></span><u>CAT</u><span
+            class="letterDecore"><u>I</u></span><u>ON</u></h1>
+    <div>
+        <aside></aside>
+        <aside></aside>
+        <aside></aside>
+    </div>
+
+</section>
+<section id="services">
+
+</section>
 <section id="contact">
 
 </section>
+<section id="footer">
 
+</section>
 </button>
 </body>
 </html>
