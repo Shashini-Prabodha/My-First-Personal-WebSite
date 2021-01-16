@@ -22,7 +22,8 @@
         }
 
         header > header {
-            box-shadow: #4d4d4d -10px 5px 10px;
+            /*box-shadow: #4d4d4d -10px 5px 10px;*/
+            box-shadow: #d045ff -8px 5px 8px;
             z-index: 0;
             animation-name: headeranimate;
             animation-duration: 5s;
@@ -264,11 +265,6 @@
             background: #aeaeae;
         }
 
-        #aboutme {
-            background: url("assert/icon/download.jpg");
-
-            background-size: cover;
-        }
 
         /*................article.................*/
 
@@ -394,9 +390,18 @@
         }
 
         /*..............set background in section.....................*/
-        #skill, #myassignments, #myproject, #services, #contact, #education {
+        /*#aboutme,#skill, #myassignments, #myproject, #services, #contact, #education {*/
+        /*    background: url("assert/icon/download.jpg");*/
+        /*    background-size: cover;*/
+        /*}*/
+
+        #aboutme, #skill, #myassignments, #myproject, #services, #contact, #education {
             background: url("assert/icon/download.jpg");
             background-size: cover;
+        }
+
+        #aboutme, #skill, #myassignments, #myproject, #services, #contact, #education {
+
         }
 
         #skill > article > h1 {
@@ -555,7 +560,7 @@
 
         }
 
-        #myassignments > article > div, #myproject > article > div,#education>div {
+        #myassignments > article > div, #myproject > article > div, #education > div, #services > div {
             position: absolute;
             width: 50px;
             height: 50px;
@@ -563,14 +568,14 @@
             box-shadow: #323232 3px -3px;
         }
 
-        #myassignments > article > div:nth-child(2), #myproject > article > div:nth-child(2),#education>div:nth-child(2) {
+        #myassignments > article > div:nth-child(2), #myproject > article > div:nth-child(2), #education > div:nth-child(2), #services > div:nth-child(2) {
             height: 60px;
             width: 60px;
             left: 27.8%;
             top: -66px;
         }
 
-        #myassignments > article > div:nth-child(3), #myproject > article > div:nth-child(3),#education>div:nth-child(3) {
+        #myassignments > article > div:nth-child(3), #myproject > article > div:nth-child(3), #education > div:nth-child(3), #services > div:nth-child(3) {
             height: 30px;
             width: 30px;
             left: 26%;
@@ -579,9 +584,9 @@
 
         #myassignments > article > aside, #myproject > article > aside {
             width: 25%;
-            height: 80%;
+            height: 70%;
             position: absolute;
-            top: 5%;
+            top: 7%;
             box-shadow: black 2px 5px 10px;
             border-radius: 50px 0 50px 0;
             border: black 1px solid;
@@ -596,14 +601,14 @@
             left: 0;
         }
 
-        #myassignments > article > aside:nth-child(5){
+        #myassignments > article > aside:nth-child(5) {
             background: url("assert/icon/ass2.gif");
             background-size: cover;
             background-position: center;
             left: 37.5%;
         }
 
-        #myassignments > article > aside:nth-child(6){
+        #myassignments > article > aside:nth-child(6) {
             background: url("assert/icon/ass2.jpg");
             background-size: cover;
             background-position: center;
@@ -723,13 +728,13 @@
             background: rgba(255, 255, 255, 0.7);
         }
 
-        #education > article:nth-child(4) {
+        #education > article:nth-child(6) {
             top: 393px;
             left: 112vh;
             border-radius: 0 50px 0 50px;
         }
 
-        #education > article:nth-child(5) {
+        #education > article:nth-child(7) {
             top: 585px;
             left: 20vh;
         }
@@ -762,15 +767,159 @@
             font-size: 20px;
         }
 
-        #education>div:nth-child(2) {
+        #education > div:nth-child(2) {
             left: 37%;
             top: 5%;
         }
 
-        #education>div:nth-child(3) {
+        #education > div:nth-child(3) {
             left: 35.5%;
             top: 11%;
 
+        }
+
+        #services > h1 {
+            top: 8%
+        }
+
+        #services > div:nth-child(2) {
+            left: 39.8%;
+            top: 9%;
+        }
+
+        #services > div:nth-child(3) {
+            left: 38.5%;
+            top: 15%;
+        }
+
+        #services > section {
+            width: 90vw;
+            height: 60vh;
+            /*border: #01D5FF 2px solid;*/
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #services > section > article:nth-child(1) {
+            width: 55%;
+            height: 85%;
+            /* border: #89d700 2px solid; */
+            position: absolute;
+            left: 5%;
+            top: 5%;
+            background: rgba(0, 0, 0, 0.3);
+            box-shadow: #4d4d4d -7px 4px 27px;
+            border-top-left-radius: 100px;
+        }
+
+        #services > section > article:nth-child(2) {
+            width: 85%;
+            height: 15%;
+            /* border: #89d700 2px solid; */
+            position: absolute;
+            right: 0;
+            top: 10%;
+            background: rgba(255, 255, 255, 0.2);
+            border-top-left-radius: 50px;
+        }
+
+        #services > section > article > h1 {
+            position: absolute;
+            text-align: left;
+            font-size: 40px;
+            bottom: -6px;
+            color: white;
+            left: 8%;
+            letter-spacing: 5px;
+        }
+
+        #services > section > article > h3 {
+            color: white;
+            text-align: center;
+            top: 35%;
+            left: 10%;
+            position: absolute;
+            font-family: Beach;
+            font-style: normal;
+            line-height: 1.7;
+            letter-spacing: 5px;
+            margin-right: 9%;
+        }
+
+        .webletterdecode {
+            color: red;
+        }
+
+        .servicePicture {
+            width: 29vw;
+            height: 55vh;
+            position: absolute;
+            right: 6%;
+            top: 16%;
+            background: url(assert/icon/contactpic.png);
+            background-size: cover;
+        }
+
+
+        #services > article {
+            width: 110px;
+            height: 110px;
+            position: absolute;
+            border-radius: 100%;
+            border: #a20000 4px solid;
+            top: 15%;
+            left: 9%;
+        }
+
+        #services > article > img {
+            left: 7px;
+            top: 8px;
+            position: absolute;
+        }
+
+        #services > footer {
+            width: 100vw;
+            height: 15%;
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            bottom: 5px;
+        }
+
+       .noofporject,.projectname{
+           position: absolute;
+            display: flex;
+           width: 100%;
+           height: 100%;
+        }
+
+        .noofporject > section {
+            width: 8%;
+            height: 65%;
+            background: rgba(0, 0, 0, 0.3);
+            margin: 0 17% 29% 8%;
+            left: 5%;
+        }
+
+        .noofporject > section > h1 {
+            text-align: center;
+            position: absolute;
+            color: white;
+            font-size: 50px;
+            font-family: Beach;
+            left: 37px;
+            margin: 0;
+        }
+.projectname{
+    height: max-content;
+    bottom: 0;
+}
+        .projectname>div{
+            font-size: 31px;
+            font-family: Beach;
+            color: black;
+            margin: 0 12% 0 14%;
         }
 
     </style>
@@ -819,6 +968,7 @@
 
 
 </section>
+
 <section id="aboutme">
     <article>
         <h1 class="h1caption">
@@ -961,9 +1111,42 @@
     </article>
 
 </section>
+
 <section id="services">
+    <h1 class="h1caption"><u>SER</u><span class="letterDecore"><u>V</u></span><u>ICES</u></h1>
+    <!--    <h1 class="h1caption"><u>SERVICES</u></h1>-->
+
+    <div></div>
+    <div></div>
+    <section>
+        <article>
+            <h3>Web design refers to the design of websites that
+                are displayed on the internet. It usually refers to
+                the user experience aspects of website development
+                rather than software development. </h3>
+        </article>
+        <article><h1>WEB DE<span class="webletterdecode">S</span>IGN</h1></article>
+        <aside></aside>
+    </section>
+    <article><img src="assert/icon/webimg.png"></article>
+    <aside class="servicePicture"></aside>
+    <footer>
+
+        <footer class="noofporject">
+            <section><h1>01</h1></section>
+            <section><h1>01</h1></section>
+            <section><h1>01</h1></section>
+        </footer>
+        <section class="projectname">
+            <div>Projects</div>
+            <div>Projects</div>
+            <div>Projects</div>
+        </section>
+    </footer>
+
 
 </section>
+
 <section id="contact">
 
 </section>
