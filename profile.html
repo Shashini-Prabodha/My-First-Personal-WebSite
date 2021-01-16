@@ -17,7 +17,7 @@
             width: 100vw;
             height: 10vh;
             position: fixed;
-            background: #1c1b1b;
+            background: #262626;
             z-index: 2;
         }
 
@@ -52,7 +52,7 @@
 
         header > div:nth-child(3) {
 
-            box-shadow: #6b0091 2px 3px 5px;
+            box-shadow: #bf00cd 2px 3px 5px;
             top: 0.5vw;
             animation-name: animateLogocircle1;
             animation-iteration-count: infinite;
@@ -555,7 +555,7 @@
 
         }
 
-        #myassignments > article > div, #myproject > article > div {
+        #myassignments > article > div, #myproject > article > div,#education>div {
             position: absolute;
             width: 50px;
             height: 50px;
@@ -563,14 +563,14 @@
             box-shadow: #323232 3px -3px;
         }
 
-        #myassignments > article > div:nth-child(2), #myproject > article > div:nth-child(2) {
+        #myassignments > article > div:nth-child(2), #myproject > article > div:nth-child(2),#education>div:nth-child(2) {
             height: 60px;
             width: 60px;
             left: 27.8%;
             top: -66px;
         }
 
-        #myassignments > article > div:nth-child(3), #myproject > article > div:nth-child(3) {
+        #myassignments > article > div:nth-child(3), #myproject > article > div:nth-child(3),#education>div:nth-child(3) {
             height: 30px;
             width: 30px;
             left: 26%;
@@ -589,21 +589,21 @@
             margin-right: 300px;
         }
 
-        #myassignments > article > aside:nth-child(4), #myproject > article > aside:nth-child(4) {
+        #myassignments > article > aside:nth-child(4) {
             background: url("assert/icon/ass1.png");
             background-size: cover;
             background-position: center;
             left: 0;
         }
 
-        #myassignments > article > aside:nth-child(5), #myproject > article > aside:nth-child(5) {
+        #myassignments > article > aside:nth-child(5){
             background: url("assert/icon/ass2.gif");
             background-size: cover;
             background-position: center;
             left: 37.5%;
         }
 
-        #myassignments > article > aside:nth-child(6), #myproject > article > aside:nth-child(6) {
+        #myassignments > article > aside:nth-child(6){
             background: url("assert/icon/ass2.jpg");
             background-size: cover;
             background-position: center;
@@ -671,13 +671,13 @@
             color: #FF6D67;
         }
 
-        #education > div {
+        #education > section {
             width: 2px;
-            height: 60%;
+            height: 50%;
             position: absolute;
             border-left: white 5px solid;
             left: 50%;
-            top: 60%;
+            top: 55%;
             transform: translate(-50%, -50%);
         }
 
@@ -685,7 +685,7 @@
             top: 4%
         }
 
-        #education>div>aside{
+        #education > section > aside {
             width: 30px;
             height: 30px;
             position: absolute;
@@ -696,20 +696,82 @@
             transform: translate(-50%, -50%);
         }
 
-        #education>div>aside:nth-child(2){
+        #education > section > aside:nth-child(2) {
             top: 50%;
         }
-        #education>div>aside:nth-child(3){
+
+        #education > section > aside:nth-child(3) {
             top: 100%;
         }
-        #education>div>aside{
+
+        #education > section > aside {
             background: url("assert/icon/hat.png");
             background-size: cover;
             background-position: center;
             background-color: white;
-            border:3px solid white;
+            border: 3px solid white;
         }
 
+        #education > article {
+            width: 37vw;
+            height: 15vh;
+            position: absolute;
+            border-radius: 50px 0 50px 0;
+            border: 2px white solid;
+            top: 215px;
+            left: 20vh;
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        #education > article:nth-child(4) {
+            top: 393px;
+            left: 112vh;
+            border-radius: 0 50px 0 50px;
+        }
+
+        #education > article:nth-child(5) {
+            top: 585px;
+            left: 20vh;
+        }
+
+        #education > article > aside {
+            width: 40%;
+            height: 90%;
+            position: absolute;
+            left: 0;
+            margin: 10px;
+
+        }
+
+        #education > article > aside > img {
+            width: 90%;
+            height: 95%;
+            position: absolute;
+        }
+
+        #education > article > h2 {
+            text-align: center;
+            right: 50px;
+            position: absolute;
+            font-family: "Segoe UI";
+            font-style: normal;
+            line-height: 150%;
+        }
+
+        .h2fontsize {
+            font-size: 20px;
+        }
+
+        #education>div:nth-child(2) {
+            left: 37%;
+            top: 5%;
+        }
+
+        #education>div:nth-child(3) {
+            left: 35.5%;
+            top: 11%;
+
+        }
 
     </style>
 </head>
@@ -875,13 +937,28 @@
 </section>
 
 <section id="education">
+
     <h1 class="h1caption"><u>ED</u><span class="letterDecore"><u>U</u></span><u>CAT</u><span
             class="letterDecore"><u>I</u></span><u>ON</u></h1>
-    <div>
+    <div></div>
+    <div></div>
+    <section>
         <aside></aside>
         <aside></aside>
         <aside></aside>
-    </div>
+    </section>
+    <article>
+        <aside><img src="assert/icon/ijse.png"></aside>
+        <h2><b>IJSE INSTITUTE</b></br><span class="h2fontsize">Graduate Software Engineer</span></h2>
+    </article>
+    <article>
+        <aside><img src="assert/icon/sitec.png"></aside>
+        <h2><b>SITEC INSTITUTE</b></br><span class="h2fontsize">Graphic Designing</span></h2>
+    </article>
+    <article>
+        <aside><img src="assert/icon/mmv.jpg" style="width: 50%;left:10px"></aside>
+        <h2><b>Mahanama College - Matara</b><br><span class="h2fontsize">Grade 1 to A/L</span></h2>
+    </article>
 
 </section>
 <section id="services">
