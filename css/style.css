@@ -1,0 +1,1145 @@
+
+body {
+    overflow-x: hidden;
+    background: url("../assert/icon/ws_Working_2560x1600.jpg");
+    background-size: contain;
+    background-position: initial;
+    bottom: 50%;
+
+}
+
+/*................header................*/
+header {
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    background: #262626;
+    z-index: 2;
+}
+
+header > header {
+    /*box-shadow: #4d4d4d -10px 5px 10px;*/
+    box-shadow: #888888 -8px 5px 8px;
+    z-index: 0;
+    animation-name: headeranimate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes headeranimate {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100vw;
+    }
+}
+
+/*........................SP Logo decorations.................*/
+#fixedlogo {
+    position: fixed;
+    width: 8vw;
+    height: 16vh;
+    z-index: 4;
+}
+
+header > div {
+    width: 105px;
+    height: 105px;
+    position: fixed;
+    border-radius: 100%;
+    top: 1.2vw;
+    left: 4px;
+    border: 0.3vw solid transparent;
+    flex: max-content;
+}
+
+header > div:nth-child(3) {
+
+    box-shadow: #bf00cd 2px 3px 5px;
+    top: 0.5vw;
+    animation-name: animateLogocircle1;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+
+}
+
+header > div:nth-child(4) {
+    box-shadow: #e9e9e9 2px 3px 5px;
+
+    animation-name: animateLogocircle2;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+
+}
+
+@keyframes animateLogocircle1 {
+    from {
+
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animateLogocircle2 {
+    from {
+
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+/*......................navigation button...................*/
+header > nav {
+    width: max-content;
+    height: 10vh;
+    position: absolute;
+    top: -10px;
+    bottom: 0;
+    right: 0;
+}
+
+header > nav > ul {
+    list-style: none;
+    margin: 0 2vw 0 0;
+}
+
+header > nav > ul > li {
+    display: inline-block;
+    color: #b1b1b1;
+    font-size: 1.8vw;
+    cursor: pointer;
+    font-family: "Ubuntu";
+    font-style: normal;
+    padding: 1.8vw;
+    cursor: pointer;
+
+}
+
+header > nav > ul > li > a {
+    color: #b1b1b1;
+    text-decoration: none;
+    background: transparent;
+}
+
+header > nav > ul > li > a:hover {
+    text-shadow: #0c0c0c 2px 12px 12px;
+    color: #ffffff;
+
+}
+
+header > nav > ul > li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+/*...............All section attribute define......................*/
+section {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+/*........................home page..................................*/
+.homepage {
+
+    position: absolute;
+}
+
+#homepic {
+    width: 85%;
+    height: 95%;
+    opacity: 0.8;
+    right: 0vw;
+    bottom: 0;
+    position: absolute;
+
+    background: url("../assert/icon/homepic.jpg");
+}
+
+section:nth-child(2) > section {
+    background: rgba(0, 0, 0, 0.7);
+
+}
+
+/*............Here there............................*/
+.homepage > h3 {
+    font-family: "Segoe UI";
+    font-weight: normal;
+    text-align: center;
+    left: 50%;
+    top: 30%;
+    font-size: 2vw;
+    margin: 0 0 0 0;
+    color: white;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-shadow: #101010 1vh 1vh 1vh;
+}
+
+/*.....................Programmer,etc. .........................*/
+.homepage > h2 {
+    font-family: "Ubuntu Light";
+    font-weight: normal;
+    text-align: center;
+    left: 50%;
+    font-size: 2.5vw;
+    top: 70%;
+    margin: 0 0 0 0;
+    color: white;
+    transform: translate(-50%, -50%);
+    letter-spacing: 3px;
+    position: absolute;
+    text-shadow: #101010 2px 4px 4px;
+}
+
+/*.................I,m shashini...........................*/
+.homepage > h1 {
+    font-family: "Segoe UI";
+    font-weight: normal;
+    font-size: 5vw;
+    max-width: 100vw;
+    left: 35%;
+    top: 45%;
+    margin: 0 0 0 0;
+    color: white;
+    transform: translate(-40%, -40%);
+    position: absolute;
+    text-shadow: #101010 2px 4px 4px;
+}
+
+span.wordDecore {
+    color: darkmagenta;
+    font-size: 7vw;
+    font-style: italic;
+}
+
+/*....................home page side decore........................*/
+.homepage > aside {
+    position: absolute;
+}
+
+.homepage > aside:nth-child(1) {
+    /* width: 9vw;
+     height: 18vh;
+     top: 22vh;
+     border: grey 4px solid;
+     box-shadow: #1c1b1b 5px 5px;
+     left: 6vw;*/
+
+    width: 9vw;
+    height: 18vh;
+    top: 22vh;
+    box-shadow: #272727 1px 9px 15px;
+    left: 6vw;
+}
+
+.homepage > aside:nth-child(2) {
+    /*width: 4vw;
+    height: 8vh;
+    top: 17vh;
+    border: grey 4px solid;
+    box-shadow: #1c1b1b 5px 5px;
+    left: 13vw;*/
+
+    width: 6vw;
+    height: 12vh;
+    top: 15vh;
+    box-shadow: #272727 1px 9px 15px;
+    left: 13vw;
+}
+
+.homepage > aside:nth-child(3) {
+    /*width: 10vw;
+    height: 22vh;
+    border-left: #c3c3c3 5px solid;
+    top: 38vh;
+    left: 8vw;*/
+
+    width: 10vw;
+    height: 22vh;
+    border-left: #3c3c3c 10px solid;
+    top: 38vh;
+    left: 7vw;
+}
+
+/*...........homepage button....................*/
+.homepage > button {
+    width: 10vw;
+    height: 6vh;
+    font-weight: bold;
+    position: absolute;
+    font-family: "Segoe Print";
+    font-size: 102%;
+    pointer: cursor;
+}
+
+#btnAboutme {
+    left: 37%;
+    top: 85%;
+    border-radius: 45% 0 45% 0;
+    background: rgba(256, 256, 256, 0.2);
+    border: #bebebe 2px solid;
+    color: #000000;
+}
+
+#btnContactme {
+    border: #ffffff;
+    left: 50%;
+    top: 85%;
+    border-radius: 0 45% 0 45%;
+    border: #ffffff 2px solid;
+    background: white;
+    text-shadow: #5b5b5b 1px 1px 5px;
+
+}
+
+#btnAboutme:hover {
+    background: white;
+    color: #0c0c0c;
+}
+
+#btnAboutme > a {
+    text-decoration: none;
+    color: #0c0c0c;
+}
+
+#btnAboutme > a:hover {
+    background: transparent;
+    text-decoration: none;
+    color: #0c0c0c;
+}
+
+#btnContactme > a {
+    color: #000000;
+    text-decoration: none;
+}
+
+#btnContactme:hover {
+    background: rgba(256, 256, 256, 0.2);
+    text-shadow: #4d4d4d 1px 1px 5px;
+    color: white;
+}
+
+#btnContactme > a:hover {
+    background: transparent;
+    text-decoration: none;
+    color: white;
+}
+
+/*....................home background...................*/
+
+#home {
+    background: #aeaeae;
+}
+
+/***************************************************************************/
+
+/*................article.................*/
+
+#aboutme > article, #skill > article, #myassignments > article, #myproject > article, #contact > article {
+    width: 80%;
+    height: 75%;
+    position: absolute;
+    left: 50%;
+    top: 58%;
+    transform: translate(-50%, -50%);
+    background: rgba(122, 122, 122, 0.2);
+    border-radius: 50px 0 50px 0;
+}
+
+/*.................article----> h1.............*/
+
+.h1caption {
+    font-family: "Ubuntu";
+    position: absolute;
+    left: 50%;
+    top: -11%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 45px;
+    letter-spacing: 3px;
+    text-align: center;
+
+}
+
+/*...........................h1 decored box.........................*/
+
+#aboutme > article > div, #skill > article > div, #myassignments > article > div, #myproject > article > div, #education > div, #services > div, #contact > article > div {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    box-shadow: #454146 -3px -1px 10px;
+
+}
+
+#aboutme > article > div:nth-child(2), #myassignments > article > div:nth-child(2), #myproject > article > div:nth-child(2), #education > div:nth-child(2), #services > div:nth-child(2), #contact > article > div:nth-child(2) {
+    height: 60px;
+    width: 60px;
+    left: 35.3%;
+    top: -40px;
+}
+
+#aboutme > article > div:nth-child(3), #myassignments > article > div:nth-child(3), #myproject > article > div:nth-child(3), #education > div:nth-child(3), #services > div:nth-child(3), #contact > article > div:nth-child(3) {
+    height: 30px;
+    width: 30px;
+    left: 34%;
+    top: 6px;
+}
+
+/*...........................photo & decore.......................*/
+
+#aboutme > aside {
+    top: 16vh;
+    left: 5vw;
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    border-radius: 100%;
+    border: #393939 3px solid;
+
+    animation-name: asideRotate;
+    animation-duration: 2s;
+
+}
+
+#aboutme > aside:nth-child(2) {
+    background: url("../assert/icon/picmy.png");
+    background-size: cover;
+}
+
+#aboutme > aside:nth-child(3) {
+
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    border-radius: 100%;
+    border: #E774B9 3px solid;
+
+}
+
+#aboutme > aside:nth-child(4) {
+
+    width: 255px;
+    height: 255px;
+    position: absolute;
+    border-radius: 100%;
+    border: #01D5FF 3px solid;
+
+}
+
+@keyframes asideRotate {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(-2deg);
+    }
+}
+
+/*.........................my details.......................*/
+
+#aboutme > article > article > h2 {
+    text-align: left;
+    padding: 10px;
+    color: white;
+    position: relative;
+    top: 15vh;
+    left: 25%;
+    font-family: "Ubuntu Medium";
+    font-style: normal;
+    letter-spacing: 3px;
+
+}
+
+/*...................................my detail paragraph.....................*/
+
+#aboutme > article > p {
+    font-family: "Segoe Print";
+    font-style: italic;
+    color: white;
+    text-align: center;
+    position: absolute;
+    padding: 5%;
+    margin: 0%;
+    bottom: 0%;
+}
+
+/*..............set background in section.....................*/
+
+#aboutme, #skill, #myassignments, #myproject, #services, #contact, #education {
+    background: url("../assert/icon/download.jpg");
+    background-size: cover;
+}
+
+/****************************************************************************************************************/
+
+/*..................................skill section...............................*/
+
+/*.........................h1 caption align.............................*/
+#skill > article > h1 {
+    top: -6%;
+}
+
+/*..................................h1 decore1 align....................*/
+
+#skill > article > div:nth-child(2) {
+    height: 60px;
+    width: 60px;
+    left: 23.8%;
+    top: -80px;
+}
+
+/*..................................h1 decore2 align....................*/
+#skill > article > div:nth-child(2) {
+    top: -47px;
+}
+
+#skill > article > div:nth-child(3) {
+    height: 30px;
+    width: 30px;
+    left: 22%;
+    top: 0px;
+}
+
+/*..........................create progressbar section..........................*/
+
+#skill > article > section {
+    width: 22vw;
+    height: 4vh;
+    border-radius: 30px;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*............................initialize progress bar property................*/
+
+.progressbar {
+    width: 80vh;
+    height: max-content;
+    position: absolute;
+    top: 15vh;
+    left: 4vw;
+}
+
+/*.............................icon ........... */
+
+.progressbar > div {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    display: flex;
+    margin: 10%;
+    left: -66px;
+}
+
+.progressbar > div:nth-child(1) {
+    top: -6%;
+    background: url("../assert/icon/java_100px.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.progressbar > div:nth-child(2) {
+    top: 17%;
+    background: url("../assert/icon/html_5_100px.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.progressbar > div:nth-child(3) {
+    top: 38%;
+    background: url("../assert/icon/css3_100px.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.progressbar > div:nth-child(4) {
+    top: 60%;
+    background: url("../assert/icon/mysql-logo-vector-free-download-11573934106vmvysk1ovw.png");
+    background-position: center;
+    background-size: cover;
+}
+
+/*...................................progess bars.........................*/
+
+.progressbar > section {
+    width: 0vw;
+    height: 3vh;
+    border-radius: 20px;
+    left: 0%;
+    display: flex;
+    margin: 10%;
+    font-style: italic;
+    color: white;
+    text-align: left;
+
+    animation-name: progressbaranimate;
+    animation-duration: 4s;
+
+}
+
+@keyframes progressbaranimate {
+    from {
+        width: 0;
+    }
+    to {
+        width: available;
+    }
+}
+
+.progressbar > section:nth-child(5) {
+    width: 70%;
+    top: 50%;
+    /*background: linear-gradient(to right, #fd3535, #fa4f46, #ff675a, #ff7769);*/
+    transition: width;
+    background: linear-gradient(to right, #640062, #790086, #ad00be, #df52ff);
+
+}
+
+.progressbar > section:nth-child(6) {
+    width: 55%;
+    top: 60%;
+    /*background: linear-gradient(to right, #f8c504, #fff319, #ecf146, #f2ff69);*/
+    background: linear-gradient(to right, #640062, #790086, #ad00be, #df52ff);
+}
+
+.progressbar > section:nth-child(7) {
+    width: 40%;
+    top: 70%;
+    /*background: linear-gradient(to right, #000e53, #0133a7, #0022cd, #281fff);*/
+    background: linear-gradient(to right, #640062, #790086, #ad00be, #df52ff);
+}
+
+.progressbar > section:nth-child(8) {
+    width: 50%;
+    top: 80%;
+    background: linear-gradient(to right, #640062, #790086, #ad00be, #df52ff);
+
+}
+
+/*................skill side picture....................*/
+
+.skillPicture {
+    width: 57%;
+    height: 81%;
+    position: absolute;
+    right: -8%;
+    background: url("../assert/icon/skillpic.png");
+    background-size: cover;
+
+}
+
+/***************************************************************************************************************************/
+
+/*..................................My Assignment.................................*/
+
+/*...............................h1 caption align.................................*/
+#myassignments > article > h1 {
+    top: -10%;
+}
+
+/*..............................h1 decore1 align.........................*/
+#myassignments > article > div:nth-child(2) {
+    top: -9%;
+    left: 31%;
+}
+
+/*..............................h1 decore2 align.........................*/
+#myassignments > article > div:nth-child(3) {
+    top: 0%;
+    left: 30%;
+}
+
+/*..............................project sections .........................*/
+#myassignments > article > aside, #myproject > article > aside {
+    width: 25%;
+    height: 70%;
+    position: absolute;
+    top: 7%;
+    box-shadow: black 2px 5px 10px;
+    border-radius: 50px 0 50px 0;
+    border: black 1px solid;
+    display: flex;
+    margin-right: 300px;
+}
+
+#myassignments > article > aside:nth-child(4) {
+    background: url("../assert/icon/ass1.png");
+    background-size: cover;
+    background-position: center;
+    left: 0;
+}
+
+#myassignments > article > aside:nth-child(5) {
+    background: url("../assert/icon/ass2.gif");
+    background-size: cover;
+    background-position: center;
+    left: 37.5%;
+}
+
+#myassignments > article > aside:nth-child(6) {
+    background: url("../assert/icon/ass2.jpg");
+    background-size: cover;
+    background-position: center;
+    left: 75%;
+}
+
+/*..........................assignment name-h2....................................*/
+
+#myassignments > article > aside > h2 {
+    font-family: Beach;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+}
+
+/*..............................view more button..............................*/
+#btnViewMoreA, #btnViewMoreP {
+    font-size: 20px;
+    left: 45%;
+    top: 87%;
+    border-radius: 50px 0 50px 0;
+    font-family: Beach;
+    border: 1px solid white;
+    background: transparent;
+    color: #bababa;
+    width: 13%;
+    height: 7%;
+    position: absolute
+}
+
+#btnViewMoreA:hover, #btnViewMoreP:hover {
+
+    left: 45%;
+    top: 87%;
+    border-radius: 50px 0 50px 0;
+    font-family: Beach;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+
+}
+
+/*************************************************************************************************************************/
+
+/*............................My project h1 caption align.................*/
+#myproject > article > h1 {
+    top: -10%;
+}
+
+/*..........................project name-h2....................................*/
+#myproject > article > aside > h2 {
+    font-family: Beach;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+}
+
+/*..............................h1 decore1 align.........................*/
+
+#myproject > article > div:nth-child(2) {
+    left: 33%;
+}
+
+/*..............................h1 decore2 align.........................*/
+
+#myproject > article > div:nth-child(3) {
+    left: 31.5%;
+}
+
+
+/*........................project align...................................*/
+#myproject > article > aside:nth-child(4) {
+    background: url("../assert/icon/proj1.gif");
+    background-size: cover;
+    background-position: center;
+    left: 0;
+}
+
+#myproject > article > aside:nth-child(5) {
+    background: url("../assert/icon/proj2.gif");
+    background-size: cover;
+    background-position: center;
+    left: 37.5%;
+}
+
+#myproject > article > aside:nth-child(6) {
+    background: url("../assert/icon/pro3.jpg");
+    background-size: cover;
+    background-position: center;
+    left: 75%;
+}
+
+/*............h1 caption letter colour pink.....................*/
+.letterDecore {
+    color: #FF6D67;
+}
+
+/*************************************************************************************************************************/
+
+/*........................................education section........................*/
+
+/*.............................h1 caption decore........................*/
+#education > div:nth-child(2) {
+    left: 37%;
+    top: 5%;
+}
+
+#education > div:nth-child(3) {
+    left: 35.5%;
+    top: 11%;
+
+}
+
+/*........................................middle line section........................*/
+#education > section {
+    width: 2px;
+    height: 50%;
+    position: absolute;
+    border-left: white 5px solid;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*............................h1 caption align.................*/
+#education > h1 {
+    top: 4%
+}
+
+/*.............................dot.....................*/
+#education > section > aside {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: white;
+    border-radius: 100%;
+    left: -2px;
+    top: -5%;
+    transform: translate(-50%, -50%);
+}
+
+#education > section > aside:nth-child(2) {
+    top: 50%;
+}
+
+#education > section > aside:nth-child(3) {
+    top: 100%;
+}
+
+#education > section > aside {
+    background: url("../assert/icon/hat.png");
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+    border: 3px solid white;
+}
+
+/*.............................education details.....................*/
+#education > article {
+    width: 37vw;
+    height: 15vh;
+    position: absolute;
+    border-radius: 50px 0 50px 0;
+    border: 2px white solid;
+    top: 160px;
+    left: 20vh;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+#education > article:nth-child(6) {
+    top: 343px;
+    left: 112vh;
+    border-radius: 0 50px 0 50px;
+}
+
+#education > article:nth-child(7) {
+    top: 525px;
+    left: 20vh;
+}
+
+/*...............education center image........................*/
+#education > article > aside {
+    width: 40%;
+    height: 90%;
+    position: absolute;
+    left: 0;
+    margin: 10px;
+
+}
+
+#education > article > aside > img {
+    width: 90%;
+    height: 95%;
+    position: absolute;
+}
+
+/*...........................details h2............................*/
+#education > article > h2 {
+    text-align: center;
+    right: 50px;
+    position: absolute;
+    font-family: "Segoe UI";
+    font-style: normal;
+    line-height: 150%;
+}
+
+.h2fontsize {
+    font-size: 20px;
+}
+
+/*************************************************************************************************************************/
+
+/*............................. service section......................*/
+
+/*.........................h1 caption align........................*/
+#services > h1 {
+    top: 8%
+}
+
+/*..................h1 decore align............................*/
+#services > div:nth-child(2) {
+    left: 39.8%;
+    top: 9%;
+}
+
+#services > div:nth-child(3) {
+    left: 38.5%;
+    top: 15%;
+}
+
+/*......................section property...........................*/
+
+#services > section {
+    width: 90vw;
+    height: 60vh;
+    /*border: #01D5FF 2px solid;*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#services > section > article:nth-child(1) {
+    width: 55%;
+    height: 85%;
+    /* border: #89d700 2px solid; */
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: #4d4d4d -7px 4px 27px;
+    border-top-left-radius: 100px;
+}
+
+#services > section > article:nth-child(2) {
+    width: 85%;
+    height: 15%;
+    /* border: #89d700 2px solid; */
+    position: absolute;
+    right: 0;
+    top: 10%;
+    background: rgba(255, 255, 255, 0.2);
+    border-top-left-radius: 50px;
+}
+
+/*..................................service name........................*/
+#services > section > article > h1 {
+    position: absolute;
+    text-align: left;
+    font-size: 40px;
+    bottom: -6px;
+    color: white;
+    left: 8%;
+    letter-spacing: 5px;
+}
+
+/*...............service details..................................*/
+#services > section > article > h3 {
+    color: white;
+    text-align: center;
+    top: 35%;
+    left: 10%;
+    position: absolute;
+    font-family: Beach;
+    font-style: normal;
+    line-height: 1.7;
+    letter-spacing: 5px;
+    margin-right: 9%;
+}
+
+/*...............................service name etter deocore..................*/
+.webletterdecode {
+    color: red;
+}
+
+/*....................service picture.............................*/
+.servicePicture {
+    width: 29vw;
+    height: 55vh;
+    position: absolute;
+    right: 6%;
+    top: 16%;
+    background: url("../assert/icon/serviceimg.png");
+    background-size: cover;
+}
+
+/*.........................service logo.........................*/
+#services > article {
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    border-radius: 100%;
+    border: #a20000 4px solid;
+    top: 15%;
+    left: 9%;
+}
+
+/*........................service logo image..........................*/
+#services > article > img {
+    left: 7px;
+    top: 8px;
+    position: absolute;
+}
+
+/*..................no of project details........................*/
+#services > footer {
+    width: 100vw;
+    height: 15%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    bottom: 5px;
+}
+
+.noofporject, .projectname {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.noofporject > section {
+    width: 8%;
+    height: 65%;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 0 17% 29% 8%;
+    left: 5%;
+}
+
+/*.....................no of projects................*/
+.noofporject > section > h1 {
+    text-align: center;
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    font-family: Beach;
+    left: 37px;
+    margin: 0;
+}
+
+.projectname {
+    height: max-content;
+    bottom: 0;
+}
+
+.projectname > div {
+    font-size: 31px;
+    font-family: Beach;
+    color: black;
+    margin: 0 12% 0 14%;
+}
+
+/***********************************************************************************************************************/
+/*..........................contact me section.......................*/
+
+/*.........................h1 caption align.....................*/
+
+#contact > article > h1 {
+    top: -10%;
+}
+
+/*..................h1 decore align............................*/
+
+/*..............................h1 decore1 align.........................*/
+
+#contact > article > div:nth-child(2) {
+    left: 35%;
+    top: -9%;
+}
+
+/*..............................h1 decore2 align.........................*/
+
+#contact > article > div:nth-child(3) {
+    left: 34%;
+    top: -1%;
+}
+
+#contact > article {
+    border-radius: 0;
+}
+
+.contactpic {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    top: 10%
+}
+
+.contactpic > img {
+    width: 30vw;
+    height: 60vh;
+    position: absolute;
+}
+
+.sendmsg {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    left: 50%;
+    top: 10%;
+}
+
+.sendmsg > input, .sendmsg > textarea {
+    width: 35vw;
+    height: 5vh;
+    font-family: "Ubuntu Light";
+    position: relative;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.7);
+    border: transparent;
+    margin: 20px;
+}
+
+.sendmsg > textarea {
+    resize: none;
+    height: 22vh;
+
+}
+
+#btnSend {
+    left: 45%;
+    bottom: -36px;
+    width: 6vw;
+    height: 5vh;
+    background: #007BDA;
+    border-radius: 25px;
+    color: white;
+    font-family: 'Ubuntu';
+    position: absolute;
+}
+
+#btnSend:hover {
+    background: #4c9bff;
+    pointer: cursor;
+}
+
+
+
