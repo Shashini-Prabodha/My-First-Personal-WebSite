@@ -1,10 +1,10 @@
 
 body {
     overflow-x: hidden;
-    background: url("../assert/icon/ws_Working_2560x1600.jpg");
-    background-size: contain;
-    background-position: initial;
-    bottom: 50%;
+    /*background: url("../assert/icon/ws_Working_2560x1600.jpg");*/
+    /*background-size: contain;*/
+    /*background-position: initial;*/
+    /*bottom: 50%;*/
 
 }
 
@@ -42,6 +42,16 @@ header > header {
     width: 8vw;
     height: 16vh;
     z-index: 4;
+    transform: rotate(0deg);
+    transition: all 2s;
+
+}
+#fixedlogo:hover {
+    transform: rotate(15deg);
+    transition: all 2s;
+    box-shadow: #3c3c3c 0px 5px 10px;
+    border-radius: 100%;
+    cursor: pointer;
 }
 
 header > div {
@@ -161,7 +171,7 @@ section {
 }
 
 section:nth-child(2) > section {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.6);
 
 }
 
@@ -300,17 +310,22 @@ span.wordDecore {
 #btnAboutme:hover {
     background: white;
     color: #0c0c0c;
+    transform: translate(0px, -6px);
+    transition: all 0.6s;
+    box-shadow: #181818  2px 5px 10px;
 }
 
 #btnAboutme > a {
     text-decoration: none;
     color: #0c0c0c;
+
 }
 
 #btnAboutme > a:hover {
     background: transparent;
     text-decoration: none;
     color: #0c0c0c;
+
 }
 
 #btnContactme > a {
@@ -322,6 +337,9 @@ span.wordDecore {
     background: rgba(256, 256, 256, 0.2);
     text-shadow: #4d4d4d 1px 1px 5px;
     color: white;
+    transform: translate(0px, -6px);
+    transition: all 0.6s;
+    box-shadow: #181818 2px 5px 10px;
 }
 
 #btnContactme > a:hover {
@@ -350,6 +368,10 @@ span.wordDecore {
     background: rgba(122, 122, 122, 0.2);
     border-radius: 50px 0 50px 0;
 }
+#aboutme > article:hover, #skill > article:hover, #myassignments > article:hover, #myproject > article:hover, #contact > article:hover {
+
+    box-shadow: #3b3b3b 2px 5px 20px;
+}
 
 /*.................article----> h1.............*/
 
@@ -374,6 +396,11 @@ span.wordDecore {
     height: 50px;
     box-shadow: #454146 -3px -1px 10px;
 
+
+}
+#aboutme > article > div:hover, #skill > article > div:hover, #myassignments > article > div:hover, #myproject > article > div:hover, #education > div:hover, #services > div:hover, #contact > article > div:hover {
+    transform: rotate(360deg);
+    transition: all 2s;
 }
 
 #aboutme > article > div:nth-child(2), #myassignments > article > div:nth-child(2), #myproject > article > div:nth-child(2), #education > div:nth-child(2), #services > div:nth-child(2), #contact > article > div:nth-child(2) {
@@ -390,6 +417,10 @@ span.wordDecore {
     top: 6px;
 }
 
+/************************************************************************************************************************/
+
+/*.............................about me.........................*/
+
 /*...........................photo & decore.......................*/
 
 #aboutme > aside {
@@ -399,8 +430,8 @@ span.wordDecore {
     height: 220px;
     position: absolute;
     border-radius: 100%;
-    border: #393939 3px solid;
-
+    /*border: #393939 3px solid;*/
+    box-shadow: #565656 0px 14px 117px;
     animation-name: asideRotate;
     animation-duration: 2s;
 
@@ -417,7 +448,9 @@ span.wordDecore {
     height: 230px;
     position: absolute;
     border-radius: 100%;
-    border: #E774B9 3px solid;
+    /*border: #E774B9 3px solid;*/
+    border: transparent;
+    box-shadow: #E774B9 0px 5px 1px;
 
 }
 
@@ -427,8 +460,9 @@ span.wordDecore {
     height: 255px;
     position: absolute;
     border-radius: 100%;
-    border: #01D5FF 3px solid;
-
+    /*border: #01D5FF 3px solid;*/
+    border: transparent;
+    box-shadow: #01D5FF 0px 0px 8px;
 }
 
 @keyframes asideRotate {
@@ -447,9 +481,9 @@ span.wordDecore {
     padding: 10px;
     color: white;
     position: relative;
-    top: 15vh;
+    top: 12vh;
     left: 25%;
-    font-family: "Ubuntu Medium";
+    font-family: "Ubuntu";
     font-style: normal;
     letter-spacing: 3px;
 
@@ -467,7 +501,27 @@ span.wordDecore {
     margin: 0%;
     bottom: 0%;
 }
+#btnDownloadCV{
+    font-family: 'Segoe Print';
+    border-radius: 20% 20% 20% 20%;
+    background: rgba(256, 256, 256, .2);
+    width: 94px;
+    height: 35px;
+    bottom: 170px;
+    right: 345px;
+    position: absolute;
+    border: 1px #ffffff solid;
+    color: wheat;
+    box-shadow: black 2px 2px 2px;"
+}
+#btnDownloadCV:hover{
+    background: transparent;
+    transform: translate(0px, -6px);
+    box-shadow: #454545 2px 5px 10px;
+    cursor: pointer;
+    transition: all 0.6s;
 
+}
 /*..............set background in section.....................*/
 
 #aboutme, #skill, #myassignments, #myproject, #services, #contact, #education {
@@ -513,7 +567,7 @@ span.wordDecore {
     border-radius: 30px;
     position: absolute;
     left: 0%;
-    top: 50%;
+    top: 40%;
     transform: translate(-50%, -50%);
 }
 
@@ -566,11 +620,12 @@ span.wordDecore {
     background-size: cover;
 }
 
+
 /*...................................progess bars.........................*/
 
 .progressbar > section {
     width: 0vw;
-    height: 3vh;
+    height: 3.5vh;
     border-radius: 20px;
     left: 0%;
     display: flex;
@@ -578,7 +633,7 @@ span.wordDecore {
     font-style: italic;
     color: white;
     text-align: left;
-
+box-shadow:#b900ff 2px 4px 3px;
     animation-name: progressbaranimate;
     animation-duration: 4s;
 
@@ -598,7 +653,9 @@ span.wordDecore {
     top: 50%;
     /*background: linear-gradient(to right, #fd3535, #fa4f46, #ff675a, #ff7769);*/
     transition: width;
-    background: linear-gradient(to right, #640062, #790086, #ad00be, #df52ff);
+    /*background: linear-gradient(to right, #640062, #790086, #ad00be, #df52ff);*/
+    background: rgba(150, 25, 183, 0.5);
+
 
 }
 
@@ -606,20 +663,27 @@ span.wordDecore {
     width: 55%;
     top: 60%;
     /*background: linear-gradient(to right, #f8c504, #fff319, #ecf146, #f2ff69);*/
-    background: linear-gradient(to right, #640062, #790086, #ad00be, #df52ff);
+    /*background: linear-gradient(to right, #640062, #790086, #ad00be, #df52ff);*/
+    background: rgba(150, 25, 183, 0.5);
+
+
 }
 
 .progressbar > section:nth-child(7) {
     width: 40%;
     top: 70%;
     /*background: linear-gradient(to right, #000e53, #0133a7, #0022cd, #281fff);*/
-    background: linear-gradient(to right, #640062, #790086, #ad00be, #df52ff);
+    /*background: linear-gradient(to right, #640062, #790086, #ad00be, #df52ff);*/
+    background: rgba(150, 25, 183, 0.5);
+
+
 }
 
 .progressbar > section:nth-child(8) {
     width: 50%;
     top: 80%;
-    background: linear-gradient(to right, #640062, #790086, #ad00be, #df52ff);
+    /*background: linear-gradient(to right, #640062, #790086, #ad00be, #df52ff);*/
+    background: rgba(150, 25, 183, 0.5);
 
 }
 
@@ -724,7 +788,28 @@ span.wordDecore {
     border: 1px solid white;
     background: rgba(255, 255, 255, 0.25);
     color: white;
+    transform: translate(0px, -6px);
+    box-shadow: #454545 2px 5px 10px;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+#myassignments>article>aside>section{
+    /*background: rgba(0, 0, 0, 0.6);*/
+    width: 100%;
+    height: 5%;
+    position: absolute;
+    border-radius: 50px 0 50px 0;
 
+    transition: all 2s;
+
+
+}
+#myassignments>article>aside>section:hover{
+    transition-property: width,height;
+    background: rgba(0, 0, 0, 0.6);
+    width: 200px;
+    height: 200px;
+    transition: all 2s;
 }
 
 /*************************************************************************************************************************/
@@ -780,7 +865,8 @@ span.wordDecore {
 
 /*............h1 caption letter colour pink.....................*/
 .letterDecore {
-    color: #FF6D67;
+    /*color: #FF6D67;*/
+color: #b035b0;
 }
 
 /*************************************************************************************************************************/
@@ -1134,6 +1220,7 @@ span.wordDecore {
     color: white;
     font-family: 'Ubuntu';
     position: absolute;
+    border-style: hidden;
 }
 
 #btnSend:hover {
@@ -1144,6 +1231,104 @@ span.wordDecore {
     transform: translate(0px, -6px);
     transition: all 0.6s;
 }
+#footer{
+    width: 100vw;
+    height: 400px;
+    position: absolute;
+    background: #00011a;
+}
+#footer>div>h1{
+    text-align: center;
+    font-family: "Ubuntu";
+    color: white;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+#footer>div>h3{
+    text-align: center;
+    font-family: "Ubuntu Light";
+    color: white;
+    letter-spacing: 5px;
+}
+#footer>div>div{
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    left:50%;
+    top: 45%;
+    transform: translate(-50%,-50%);
+}
+#footer>div>div>h4{
+    text-align: left;
+    font-family: "Ubuntu Light";
+    color: white;
+    letter-spacing: 3px;
+}
+#footer>div>div>h4:nth-child(1)>i {
+    color: red;
+    margin-right: 10px;
+
+}
+#footer>div>div>h4:nth-child(2)>i {
+    color: #6bff6b;
+    margin-right: 10px;
+}
+#footer>div>div>h4:nth-child(3)>i {
+    color: #ff5454;
+    margin-right: 10px;
+}
+#footer>aside{
+    width: max-content;
+    height: max-content;
+    left:50%;
+    top: 75%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+#footer>aside>a>img{
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+
+
+}
+#footer>aside>a>img:hover{
+    border-radius: 100%;
+    border-spacing: 0;
+    box-shadow: #2a7177 0px 8px 30px;
+    cursor: pointer;
+    transform: translate(0,-5px);
+    transition: all 60ms;
+}
+#footer>footer{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height:max-content;
+    background: #2f2e2e;
+}
+#footer>footer>h6{
+    text-align: center;
+    color: white;
+font-family: "Ubuntu Light";
+    margin: 15px;
+    letter-spacing: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
